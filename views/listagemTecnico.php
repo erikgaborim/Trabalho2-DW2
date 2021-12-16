@@ -36,7 +36,7 @@
                     echo" 
                         <div class = 'card'>
 
-                            <img class = 'tecnico' src = '../images/selecao-icon.jpeg'>
+                            <img class = 'tecnico' src = '../images/tite.jpg'>
 
                             <div class='content'>
 

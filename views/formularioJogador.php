@@ -34,7 +34,7 @@
     <main> 
         <form action="<?php echo APP; ?>jogador/salvar" method="post" enctype='multipart/form-data'>
             <h3>Inserir Jogador</h3>
-            <input type="hidden" name="imagem" value='<?php echo "{$jogador['imagem']}"; ?>'>
+       
             <input readonly type="text" class="form-control" id="id" name="id" value='<?php echo "{$jogador['id']}"; ?>'>
 
             <input type="text" name="nome" placeholder="Nome Completo" value = '<?php echo "{$jogador['nome']}"
@@ -49,7 +49,7 @@
             ?>' required>
             <input type="date" name="data_nascimento"  placeholder="Data de Nascimento" value = '<?php echo "{$jogador['data_nascimento']}"
             ?>' required>
-            <input type="file" accept="image/*" id="arquivo" name="arquivo">
+            <!-- <input type="file" accept="image/*" id="arquivo" name="arquivo"> -->
             <select class="form-select" name="id_clube">
             <?php
             foreach ($clubes as $clube) {

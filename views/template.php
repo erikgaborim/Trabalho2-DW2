@@ -55,9 +55,9 @@
                   <?php
                     $caminho = APP;
                     if ($usuarioLogado['id']!=0) {
-                        echo "<a class='nav-link active' aria-current='page' href='$caminho/login/logout'>Sair</a>";
+                        echo "<a class='nav-link active' aria-current='page' href='$caminho/login/logout'><h3>Sair</h3></a>";
                     } else {
-                      echo "<a class='nav-link active' aria-current='page' href='$caminho/login/login'>Entrar</a>";
+                      echo "<a class='nav-link active' aria-current='page' href='$caminho/login/login'><h3>Entrar</h3></a>";
                     }
                   ?>
 

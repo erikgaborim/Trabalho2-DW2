@@ -51,28 +51,28 @@
       $jogador['data_nascimento'] = $_POST['data_nascimento'];
       $jogador['id_clube'] = $_POST['id_clube'];
       $jogador['id_selecao'] = $_POST['id_selecao'];
-      $jogador['imagem'] = $_POST['imagem'];
+      // $jogador['imagem'] = $_POST['imagem'];
 
-      if (isset($_FILES['arquivo']) && $_FILES['arquivo']['size'] != 0) {
-        $arquivo = $_FILES['arquivo'];
-        $nomeArquivo = $arquivo['name'];
-        $extensao = pathinfo($nomeArquivo, PATHINFO_EXTENSION); //extensão do arquivo
+      // if (isset($_FILES['arquivo']) && $_FILES['arquivo']['size'] != 0) {
+      //   $arquivo = $_FILES['arquivo'];
+      //   $nomeArquivo = $arquivo['name'];
+      //   $extensao = pathinfo($nomeArquivo, PATHINFO_EXTENSION); //extensão do arquivo
 
-        // sha1 - funcao que gera nome de arquivo de tamanho 40
-        $nomeArquivoSalvo = sha1(time()).".".$extensao;
+      //   // sha1 - funcao que gera nome de arquivo de tamanho 40
+      //   $nomeArquivoSalvo = sha1(time()).".".$extensao;
 
-        $arquivoTemporario = $arquivo['tmp_name'];
+      //   $arquivoTemporario = $arquivo['tmp_name'];
 
-        // move da pasta temporaria do apache para a pasta imagens
-        $caminho = APP;
-        move_uploaded_file($arquivoTemporario, "$caminho/images/".$nomeArquivoSalvo);
+      //   // move da pasta temporaria do apache para a pasta imagens
+      //   $caminho = APP;
+      //   move_uploaded_file($arquivoTemporario, "$caminho/images/".$nomeArquivoSalvo);
 
-        // apagar o arquivo anterior da categoria
-        if ($jogador['imagem'] != "") {
-          unlink('images/'.$jogador['imagem']);
-        }
-        $jogador['imagem'] = $nomeArquivoSalvo;
-      }
+      //   // apagar o arquivo anterior da categoria
+      //   if ($jogador['imagem'] != "") {
+      //     unlink('images/'.$jogador['imagem']);
+      //   }
+      //   $jogador['imagem'] = $nomeArquivoSalvo;
+      // }
 
       $model = new Jogador();
       if ($jogador['id'] == 0) {
