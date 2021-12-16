@@ -1,4 +1,20 @@
-
+<?php
+//   if (!isset($_SESSION)) {
+//     session_start();
+//   }
+//   if (isset($_SESSION['id_usuario'])) {
+//     $id_usuario = $_SESSION['id_usuario'];
+//     $model = new Usuario();
+//     $usuarioLogado = $model->getById($id_usuario);
+//   } else {
+//     $usuarioLogado['email'] = "Não Logado";
+//     $usuarioLogado['id'] = 0;
+//     if ($arquivo != "views/login.php" && $arquivo != "views/index.php") {
+//       header("location: ".APP."login/login");
+//       exit(0);
+//     }
+//   }
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
