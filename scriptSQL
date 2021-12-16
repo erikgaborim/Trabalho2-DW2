@@ -47,6 +47,7 @@ CREATE TABLE jogador
 	peso real,
 	posicao character varying(20),
 	data_nascimento date,
+	imagem varchar(45) NULL,
 	id_clube int NOT NULL REFERENCES clube ON DELETE CASCADE ON UPDATE CASCADE,
 	CONSTRAINT fk_jogador_clube FOREIGN KEY(id_clube) REFERENCES clube(id),
 	id_selecao int NOT NULL REFERENCES selecao ON DELETE CASCADE ON UPDATE CASCADE,
