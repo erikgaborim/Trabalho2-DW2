@@ -32,8 +32,8 @@
     <form action="<?php echo APP; ?>login/logar" method="post">
 
       <h3>Login</h3>
-      <input type="email" id="login" class="fadeIn second" name="email" placeholder="E-mail">
-      <input type="text" id="password" class="fadeIn third" name="senha" placeholder="password">
+      <input type="text" id="login" class="fadeIn second" name="email" placeholder="E-mail">
+      <input type="password" id="password" class="fadeIn third" name="senha" placeholder="Senha">
       <input type="submit" class="fadeIn fourth" value="Log In">
   
     </form>

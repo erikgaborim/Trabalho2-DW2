@@ -29,7 +29,7 @@
       $jogador = $model->getById($id);
       $dados = array();
       $dados['jogador'] = $jogador;
-      $this->view("formulariojogador", $dados);
+      $this->view("formularioJogador", $dados);
     }
 
     public function excluir($id) {

@@ -1,19 +1,19 @@
 <?php
-//   if (!isset($_SESSION)) {
-//     session_start();
-//   }
-//   if (isset($_SESSION['id_usuario'])) {
-//     $id_usuario = $_SESSION['id_usuario'];
-//     $model = new Usuario();
-//     $usuarioLogado = $model->getById($id_usuario);
-//   } else {
-//     $usuarioLogado['email'] = "Não Logado";
-//     $usuarioLogado['id'] = 0;
-//     if ($arquivo != "views/login.php" && $arquivo != "views/index.php") {
-//       header("location: ".APP."login/login");
-//       exit(0);
-//     }
-//   }
+  if (!isset($_SESSION)) {
+    session_start();
+  }
+  if (isset($_SESSION['id_usuario'])) {
+    $id_usuario = $_SESSION['id_usuario'];
+    $model = new Usuario();
+    $usuarioLogado = $model->getById($id_usuario);
+  } else {
+    $usuarioLogado['email'] = "Não Logado";
+    $usuarioLogado['id'] = 0;
+    if ($arquivo != "views/login.php" && $arquivo != "views/index.php") {
+      header("location: ".APP."login/login");
+      exit(0);
+    }
+  }
 ?>
 
 <!DOCTYPE html>
@@ -51,6 +51,17 @@
                 <li><a href="<?php echo APP."clube/listar";?>"><h3>Clubes</h3></a></li>
                 <li><a href="<?php echo APP."tecnico/listar";?>"><h3>Técnicos</h3></a></li>
                 <li><a href="<?php echo APP."partida/listar";?>"><h3>Partidas</h3></a></li>
+                <li>
+                  <?php
+                    $caminho = APP;
+                    if ($usuarioLogado['id']!=0) {
+                        echo "<a class='nav-link active' aria-current='page' href='$caminho/login/logout'>Sair</a>";
+                    } else {
+                      echo "<a class='nav-link active' aria-current='page' href='$caminho/login/login'>Entrar</a>";
+                    }
+                  ?>
+
+                </li>
                 <li><img src="<?php echo APP."images/logo-copa.svg";?>" alt="simbolo_copa_catar"></li>
             </div>
         </ul>

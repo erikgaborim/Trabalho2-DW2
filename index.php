@@ -1,6 +1,6 @@
 <?php
 
-  define("APP", "http://localhost/Trabalho2-DW2/");
+  define("APP", "http://localhost:100/DW2/Trabalho2/");
 
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);

@@ -61,4 +61,4 @@ CREATE TABLE usuario(
     senha character varying(40) NOT NULL
 );
 
-insert into usuario(id, nome, email, senha) values(1, 'Vini', 'vinijunior@gmail.com', 'meteliogoli');
+insert into usuario(id, nome, email, senha) values(1, 'Vini', 'vinijunior@gmail.com', '92f20dafc5e5ac1c66820903c492cc04');

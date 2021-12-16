@@ -14,13 +14,10 @@
             $email = $_POST['email'];
             $senha = $_POST['senha'];
             
-            var_dump(md5($senha));
-
             $model = new Usuario();
             $usuario = $model->getByEmail($email);
 
             if($usuario == null){
-                echo "teste";
                 setcookie("erro", "E-mail não encontrado! Tente novamente.");
                 setcookie("email", $email);
                 $this->redirect("login/login");
