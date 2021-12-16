@@ -1,0 +1,114 @@
+:root{
+    font-family: Roboto;
+    --buttom-color: #0D0D0D;
+    --button-color-hover: #1d1d1d;
+    --buttom-header-font-color: #A66D88;
+    --index-main-color: #731943;
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+
+header li{
+    list-style: none;
+}
+
+header ul{
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+#qatar-name{
+    font: 400 40px Roboto Slab;
+    padding: 0;
+}
+
+#div-header-options{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+}
+
+#div-header-options h3{
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--buttom-header-font-color);
+    margin: 0 3rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+#div-header-options img{
+    margin: 0 1rem;
+    min-width: 75px;
+    min-height: 75px;
+}
+
+.div-buttons{
+    text-align: center;
+}
+
+.crud-buttons{
+    margin: 2rem 0.5rem;
+    height: 2.5rem;
+    width: 6rem;
+    border-radius: 1.2rem;
+    border-style: none;
+    font-family: Roboto;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.crud-buttons:hover{
+    width: 8rem;
+    height: 3rem;
+    font-size: 18px;
+}
+
+.update-button{
+    background-color: yellow;
+}
+
+.delete-button{
+    background-color: red;
+    color: white;
+}
+
+.create-button{
+    background-color: green;
+    width: 10rem;
+    margin: 0.4rem 0;
+}
+
+.create-button:hover{
+    width: 12rem;
+    height: 3rem;
+}
+
+section{
+    /* margin: 10rem; */
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    /* max-width: 90%; */
+    margin-left: auto;
+    margin-right: auto;
+    justify-content:center;
+    /* max-width: 80%; */
+}
+a{
+    color: var(--buttom-header-font-color);
+}
+footer{
+    color: var(--buttom-header-font-color);
+    text-align: center;
+    margin: 1rem;
+}

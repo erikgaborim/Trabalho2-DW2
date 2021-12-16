@@ -1,0 +1,118 @@
+-- CREATE DATABASE CUP;
+
+CREATE TABLE clube
+(
+	id SERIAL PRIMARY KEY,
+	nome character varying(30),
+	titulos int
+);
+
+CREATE TABLE tecnico
+(
+	id SERIAL PRIMARY KEY,
+	nome character varying(30),
+	titulos int
+);
+
+CREATE TABLE selecao
+(
+	id SERIAL PRIMARY KEY,
+	nome character varying(30),
+	titulos int,
+	participacao int,
+	posicao int,
+	id_tecnico int NOT NULL REFERENCES tecnico ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT fk_selecao_tecnico FOREIGN KEY(id_tecnico) REFERENCES tecnico(id)
+);
+
+CREATE TABLE partida
+(
+	id SERIAL PRIMARY KEY,
+	tipo character varying(30),
+	estadio character varying(30),
+	horario date,
+	id_selecao1 int NOT NULL REFERENCES selecao ON DELETE CASCADE ON UPDATE CASCADE,
+	id_selecao2 int NOT NULL REFERENCES selecao ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT fk_partida_selecao FOREIGN KEY(id_selecao1) REFERENCES selecao(id),
+	CONSTRAINT fk_selecao_partida FOREIGN KEY(id_selecao2) REFERENCES selecao(id)
+
+);
+
+CREATE TABLE jogador
+(
+	id SERIAL PRIMARY KEY,
+	nome character varying(30),
+	apelido character varying (20),
+	altura real,
+	peso real,
+	posicao character varying(20),
+	data_nascimento date,
+	id_clube int NOT NULL REFERENCES clube ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT fk_jogador_clube FOREIGN KEY(id_clube) REFERENCES clube(id),
+	id_selecao int NOT NULL REFERENCES selecao ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT fk_jogador_selecao FOREIGN KEY(id_selecao) REFERENCES selecao(id)
+);
+
+
+
+
+INSERT INTO clube (nome, titulos) VALUES ('Santos', 1000);
+
+INSERT INTO clube (nome, titulos) VALUES ('Flamengo', 37);
+
+INSERT INTO clube (nome, titulos) VALUES ('São Paulo', 41);
+
+INSERT INTO clube (nome, titulos) VALUES ('Palmeiras', 35);
+
+INSERT INTO clube (nome, titulos) VALUES ('Corinthians', 30);
+
+INSERT INTO clube (nome, titulos) VALUES ('Vasco', 13);
+
+INSERT INTO clube (nome, titulos) VALUES ('Botafogo', 12);
+
+INSERT INTO clube (nome, titulos) VALUES ('Cruzeiro', 26);
+
+INSERT INTO clube (nome, titulos) VALUES ('Atlético Mineiro', 30);
+
+INSERT INTO clube (nome, titulos) VALUES ('Grêmio', 29);
+
+INSERT INTO clube (nome, titulos) VALUES ('Internacional', 29);
+
+INSERT INTO clube (nome, titulos) VALUES ('Fluminense', 12);
+
+INSERT INTO clube (nome, titulos) VALUES ('Barcelona', 127);
+
+INSERT INTO clube (nome, titulos) VALUES ('Real Madrid', 110);
+
+INSERT INTO clube (nome, titulos) VALUES ('PSG', 100);
+
+INSERT INTO clube (nome, titulos) VALUES ('Liverpool', 95);
+
+INSERT INTO clube (nome, titulos) VALUES ('Manchester City', 88);
+
+INSERT INTO clube (nome, titulos) VALUES ('Manchester United', 88);
+
+INSERT INTO clube (nome, titulos) VALUES ('Borussia Dortmund', 89);
+
+INSERT INTO clube (nome, titulos) VALUES ('Juventus', 75);
+
+INSERT INTO clube (nome, titulos) VALUES ('Atlético de Madrid', 75);
+
+
+INSERT INTO tecnico (nome, titulos) VALUES ('Tite', 14);
+
+INSERT INTO tecnico (nome, titulos) VALUES ('Lionel Scaloni', 8);
+
+INSERT INTO tecnico (nome, titulos) VALUES ('Luis García', 9);
+
+INSERT INTO tecnico (nome, titulos) VALUES ('Hans-Dieter Flick', 9);
+
+INSERT INTO tecnico (nome, titulos) VALUES ('Didier Deschamps', 10);
+
+INSERT INTO tecnico (nome, titulos) VALUES ('Roberto Martínez', 7);
+
+INSERT INTO tecnico (nome, titulos) VALUES ('Gareth Southgate', 11);
+
+INSERT INTO tecnico (nome, titulos) VALUES ('Óscar Tabárez', 5);
+
+INSERT INTO tecnico (nome, titulos) VALUES ('Gustavo Alfaro', 9);

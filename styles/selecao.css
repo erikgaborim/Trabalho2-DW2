@@ -1,0 +1,106 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+
+section{
+    /* margin: 10rem; */
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    /* max-width: 90%; */
+    margin-left: auto;
+    margin-right: auto;
+    justify-content:center;
+    /* max-width: 80%; */
+}
+
+.card{
+    box-shadow: 1px 4px 8px 1px rebeccapurple;
+    /* padding: 2rem 3.6rem; */
+    margin: 3rem;
+    width:20rem;
+    text-decoration: none;
+    /* background-color: rgb(48, 46, 46); */
+    /* color: aliceblue; */
+
+}
+
+.card img{
+    width: 100%;
+    max-height: 10rem;
+    object-fit: cover;
+}
+
+.card .content .text{
+    padding: 0 2rem; 
+}
+
+.card .content h2{
+    text-align: center;
+    margin: 0;
+}
+
+.card .text{
+    display: flex;
+    column-gap: 10px;
+/*    margin: 1rem;*/
+}
+
+
+.button {
+    text-align: center;
+}
+
+
+.atributo{
+    display:flex;
+   /* align-items: center; */
+    margin-right: auto;         
+    /* color: red;        */
+}
+.valor{
+    display: flex;
+    margin-left: auto;
+    /* color: ; */
+}
+
+.card  .content {
+    padding: 10px;
+}
+
+.card h2{
+    font-size: 2rem;
+}
+
+
+
+.card p{
+    font-size: 1rem;
+}
+
+.butao{
+    text-align: center;
+    margin: 2.6rem;
+}
+
+body{
+    background-color: fffff;
+}
+
+.area{
+    display: flex;
+    width: 100%;
+    /* align-items: center; */
+    justify-content:center;
+    color: white;
+}
+/* 
+.area .create-button{
+    white: white !important;
+} */
+.rodape{
+    background-color:red;
+}
