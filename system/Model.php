@@ -8,7 +8,7 @@
     public function __construct() {
       try {
         $opcoes = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
-        $this->conexao = new PDO('pgsql:host=localhost; dbname=CUP', "postgres", "edwedwedw", $opcoes);
+        $this->conexao = new PDO('pgsql:host=localhost; dbname=CUP', "postgres", "1234", $opcoes);
       } catch (PDOException $e) {
         $this->conexao = null;
       }
