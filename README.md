@@ -12,5 +12,8 @@ Trabalho desenvolvido para a disciplina de Desenvolvimento Web 2 do IFMS.
   <img height="70" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" style="max-width: 100%;">
   &nbsp;&nbsp;&nbsp;&nbsp;
   <img height="60" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-plain.svg" style="max-width: 100%;">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img height="70" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-plain-wordmark.svg" />
+
 </p>
 
