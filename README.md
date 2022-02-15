@@ -1,5 +1,7 @@
 # Trabalho2-DW2
 
-### Não esquecer de alterar:
-- Model.php (conexão com o bd);
-- Index.php (Mudar o caminho definido "APP").
+Trabalho desenvolvido para a disciplina de Desenvolvimento Web 2 do IFMS.
+
+## O que é o site?
+
+É um sistema de cadastro de jogadores e seleções para a Copa do Mundo de 2022.
